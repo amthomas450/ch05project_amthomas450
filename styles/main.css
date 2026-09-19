@@ -1,0 +1,37 @@
+/* Anthony Thomas 9/19/26 */
+
+/* all required fields */
+
+.required {
+    border-color: red;
+
+}
+
+/* invalid email field */
+
+.invalidEmail {
+    border: 2px solid red;
+
+
+}
+
+/* nav styles */
+
+nav {
+	width: 200px;
+	float: left;
+}
+
+nav ul {
+    line-height: 2em;
+    list-style-type: none;
+    padding-left: 0px;
+	text-indent: 5px; 
+    border-radius: 5px;  
+}
+
+nav a {
+    color: maroon;
+    font-weight:bold;
+    text-decoration: none;
+}

@@ -1,0 +1,69 @@
+<!-- Anthony Thomas 9/19/26 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validating HTML Forms with JavaScript</title>
+    <link rel="stylesheet" type="text/css" href="./styles/main.css" media="screen" />
+    <script src="./scripts/form-validation.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Validating HTML Forms with JavaScript</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="video.html">Videos</a></li>
+            <li><a href="contact_us.html">Contact Us</a></li>
+
+        </ul>
+
+    </nav>
+
+    <section>
+        <h2>Contact Form</h2>
+        <form onsubmit="return validateForm(this)" novalidate>
+            <fieldset>
+                <legend>Japan Visitation Feedback Form</legend>
+                <label for="f_name">First Name:</label>
+  				<input class="required" type="text" id="f_name" name="f_name" required>
+  				<br/>
+  				<label for="l_name">Last Name:</label>
+  				<input class="required" type="text" id="l_name" name="l_name" required>
+  				<br/>
+                <label for="email">Email:</label>
+                <input class="required" type="email" id="email" name="email" required onblur="validateEmail()">
+                <br/>
+
+                <label for="fav_sight">Favorite Thing to See:</label>
+                    <select id="fav_sight" name="fav_sight">
+                        <option value="trees">Cherry Blossoms</option>
+                        <option value="machines">Vending Machines</option>
+                        <option value="mountain">Mount Fiji</option>
+                        <option value="manga">Manga Souko Shops</option>
+                        <option value="n/a">None of the Above</option>
+
+                    </select>
+                <br/>
+
+                <textarea class="required" name="message" rows="10" cols="50" maxlength="400" placeholder="Write About Your Experience!" required></textarea>
+                <br/>
+
+                <span id="checkMissing"></span>
+                <br/>
+
+                <input type="submit" value="Submit">
+
+                </fieldset>
+        </form>
+
+    </section>
+    
+</body>
+</html>
